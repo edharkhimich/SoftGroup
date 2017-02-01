@@ -47,16 +47,16 @@ public class MainClass {
 
     private static Map<String, Date> addSurnameAndDateToMap() {
         mapWithDate = new HashMap<>();
-        mapWithDate.put("A", new Date("JUNE-1-1980"));
-        mapWithDate.put("B", new Date("AUGUST 5 1975"));
-        mapWithDate.put("C", new Date("MARCH 1 1990"));
-        mapWithDate.put("D", new Date("JANUARY 3 1989"));
-        mapWithDate.put("F", new Date("SEPTEMBER 9 1976"));
-        mapWithDate.put("G", new Date("JUNE 6 1999"));
-        mapWithDate.put("E", new Date("OCTOBER 3 2000"));
-        mapWithDate.put("T", new Date("JUNE 1 2000"));
-        mapWithDate.put("X", new Date("MARCH 15 1950"));
-        mapWithDate.put("Y", new Date("JUNE 1 2001"));
+        mapWithDate.put("Alex", new Date("JUNE-1-1980"));
+        mapWithDate.put("Bob", new Date("AUGUST 5 1975"));
+        mapWithDate.put("Calvin", new Date("MARCH 1 1990"));
+        mapWithDate.put("David", new Date("JANUARY 3 1989"));
+        mapWithDate.put("Frank", new Date("SEPTEMBER 9 1976"));
+        mapWithDate.put("Georg", new Date("JUNE 6 1999"));
+        mapWithDate.put("Edgar", new Date("OCTOBER 3 2000"));
+        mapWithDate.put("Tom", new Date("JUNE 1 2000"));
+        mapWithDate.put("Xioynu", new Date("MARCH 15 1950"));
+        mapWithDate.put("Yeva", new Date("JUNE 1 2001"));
 
         return mapWithDate;
     }

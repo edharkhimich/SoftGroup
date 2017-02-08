@@ -1,75 +1,88 @@
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class MainClass {
 
-    private static Map<String, String> map;
-    private static Map<String, Date> mapWithDate;
-    private static SimpleDateFormat dateFormat;
-    private static int surnameCounter;
-    private static int nameCounter;
-    private static Map.Entry<String, Date> data;
-
+    private static Scanner scanner;
+    private static String letter;
+    private static String finishWord = "";
+    private static boolean wasFirstSpace;
+    private static ArrayList<String> newWord;
+    private static char[] charArray;
 
     public static void main(String[] args) {
-        addNameAndSurnameToMap();
-        System.out.println(checkTheSameSurname("Surname8"));
-        System.out.println(checkTheSameName("Name1"));
-
-        removeAllSummerPeople((HashMap<String, Date>) addSurnameAndDateToMap());
-
+        scanner = new Scanner(System.in);
+//        System.out.println(convertSpacesWithArray(scanner.nextLine()));
+//        System.out.println(convertSpacesWithList(scanner.nextLine()));
+//        checkPalindromWord(scanner.nextLine());
+//        stringCutter(scanner.nextLine(), 16);
     }
 
-    private static void addNameAndSurnameToMap() {
-        map = new HashMap<>();
-        for (int i = 0; i < 7; i++) {
-            map.put("Surname" + i, "Name" + i);
-        }
-        map.put("Surname8", "Name1");
-        map.put("Surname9", "Name4");
-        map.put("Surname10", "Name1");
-    }
+    //The first version of method where we work with simple array
 
-    private static int checkTheSameSurname(String surname) {
-        for(Map.Entry<String, String> s : map.entrySet())
-            if(s.getKey().equals(surname)) surnameCounter++;
-        return surnameCounter;
-    }
-
-    private static int checkTheSameName(String name){
-        for(Map.Entry<String, String> s : map.entrySet())
-            if(s.getValue().equals(name)) nameCounter++;
-        return nameCounter;
-    }
-
-    private static Map<String, Date> addSurnameAndDateToMap() {
-        mapWithDate = new HashMap<>();
-        mapWithDate.put("Alex", new Date("JUNE-1-1980"));
-        mapWithDate.put("Bob", new Date("AUGUST 5 1975"));
-        mapWithDate.put("Calvin", new Date("MARCH 1 1990"));
-        mapWithDate.put("David", new Date("JANUARY 3 1989"));
-        mapWithDate.put("Frank", new Date("SEPTEMBER 9 1976"));
-        mapWithDate.put("Georg", new Date("JUNE 6 1999"));
-        mapWithDate.put("Edgar", new Date("OCTOBER 3 2000"));
-        mapWithDate.put("Tom", new Date("JUNE 1 2000"));
-        mapWithDate.put("Xioynu", new Date("MARCH 15 1950"));
-        mapWithDate.put("Yeva", new Date("JUNE 1 2001"));
-
-        return mapWithDate;
-    }
-
-    public static void removeAllSummerPeople(HashMap<String, Date> map){
-        Iterator<Map.Entry<String,Date>> iterator = map.entrySet().iterator();
-        while (iterator.hasNext()) {
-            data = iterator.next();
-            if ((data.getValue().getMonth() == 5) || (data.getValue().getMonth() == 6) || (data.getValue().getMonth() == 7)) {
-                iterator.remove();
+    private static String convertSpacesWithArray(String incWord) {
+        charArray = incWord.toCharArray();
+        for (int i = 0; i < incWord.length(); i++) {
+            if (charArray[i] == ' ') {
+                if (!wasFirstSpace) {
+                    finishWord += charArray[i];
+                    wasFirstSpace = true;
+                }
+            } else {
+                wasFirstSpace = false;
+                finishWord += charArray[i];
             }
         }
-        map.forEach((name, date) -> System.out.println("Name: " + name + "\nBirthDate: " + new SimpleDateFormat("dd MMMM YYYY").format(date)));
+
+        return finishWord;
+    }
+
+    //The second version of method where we work with List
+    //P.S For correctly functionality you must use only one method (One must be commented, because both methods use the same variables)
+
+//    private static String convertSpacesWithList(String incWord) {
+//    newWord = new ArrayList<>();
+//        for (int i = 0; i < incWord.length(); i++) {
+//            letter = incWord.substring(i, i+1);
+//            if (letter.equals(" ")) {
+//                if (!wasFirstSpace) {
+//                    newWord.add(letter);
+//                    wasFirstSpace = true;
+//                }
+//            } else {
+//                wasFirstSpace = false;
+//                newWord.add(letter);
+//            }
+//        }
+//
+//        for (String s: newWord){
+//            finishWord += s;
+//        }
+//
+//        return finishWord;
+//    }
+
+
+    private static void stringCutter(String userWord, int decForCut){
+        char[] charArray = userWord.toCharArray();
+        String newWord = "";
+        boolean wasFoundLastSpace = false;
+            for (int i = 0; i < decForCut; i++) {
+                if (charArray[decForCut-i]== ' ' && !wasFoundLastSpace) {
+                    newWord = userWord.substring(0, decForCut-i);
+                    wasFoundLastSpace = true;
+                }
+        }
+        System.out.println(newWord);
+    }
+
+    private static void checkPalindromWord(String userWord){
+        if(userWord.length()==5) {
+            if (userWord.substring(0, 1).equalsIgnoreCase(userWord.substring(4, 5))
+                    && userWord.substring(1, 2).equalsIgnoreCase(userWord.substring(3, 4))) {
+                System.out.println("Congratulate! You word is palindrome");
+            } else System.out.println("Your word is not palindrome");
+        } else System.out.println("Your word length != 5. Please try again with correct length");
     }
 }
 

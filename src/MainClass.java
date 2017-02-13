@@ -17,7 +17,11 @@ public class MainClass {
             Method[] methods = service.getMethods();
             for(Method method : methods){
             if(service.isAnnotationPresent(Init.class)){
+                try {
+                    method.invoke();
+                } catch (Exception e){
 
+                }
             }
 
             }

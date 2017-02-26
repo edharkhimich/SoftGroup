@@ -22,10 +22,6 @@ public class Main {
         patient = new Patient();
     }
 
-    public static Room getRoom() {
-        return room;
-    }
-
     private static void crazyPeople() {
         synchronized (room) {
             while (true) {

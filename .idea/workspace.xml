@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d3a09a1-4332-4fac-9e72-721136222c82" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Doctor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Patient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Room.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/untitled/EasyWorkService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/untitled/HardWorkService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/untitled/Init.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/untitled/MainClass.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/untitled/Service.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/EasyWorkService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/HardWorkService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Init.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainClass.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Service.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,12 +57,9 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="45" column="40" lean-forward="false" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
-              <folding>
-                <element signature="e#616#617#0" expanded="true" />
-                <element signature="e#643#644#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,9 +110,9 @@
         <option value="$PROJECT_DIR$/src/A.java" />
         <option value="$PROJECT_DIR$/src/CounterTester.java" />
         <option value="$PROJECT_DIR$/src/Room.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Patient.java" />
         <option value="$PROJECT_DIR$/src/Doctor.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -660,12 +643,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="45" column="40" lean-forward="false" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
-          <folding>
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
